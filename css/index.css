@@ -225,3 +225,12 @@ img {
   width: 30%;
   margin-bottom: 30px;
 }
+.home .content-pick .btn {
+  background-color: #008080;
+  padding: 1rem 5rem;
+  display: inline-block;
+  border-radius: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
