@@ -169,21 +169,38 @@ img {
   margin: 0 auto;
 }
 nav {
+  border-bottom: 1px dashed black;
+  width: 100%;
+}
+nav .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 24%;
-  border-bottom: 1px dashed black;
+  width: 75%;
 }
-nav ul {
+nav .container ul {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 40%;
 }
-nav ul a {
+nav .container ul a {
   text-decoration: none;
   color: black;
   font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  nav .container {
+    justify-content: space-around;
+  }
+  nav .container h1 {
+    text-align: center;
+  }
+  nav .container ul {
+    width: 100%;
+    justify-content: space-around;
+  }
 }
 .footer {
   width: 100%;
@@ -195,6 +212,17 @@ nav ul a {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+@media (max-width: 500px) {
+  .home {
+    padding: 0 1rem;
+  }
+}
+.home header {
+  border-bottom: 1px dashed black;
+}
+.home header .img-content {
+  margin-bottom: 2rem;
 }
 .home .content-section {
   margin: 30px 0;
@@ -212,6 +240,13 @@ nav ul a {
 }
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-section .text-content,
+  .home .content-section .img-content {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -236,11 +271,17 @@ nav ul a {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 100%;
+  }
 }
 .home .content-pick .btn {
   background-color: #008080;
@@ -250,4 +291,15 @@ nav ul a {
   font-size: 2rem;
   text-align: center;
   color: white;
+}
+@media (max-width: 500px) {
+  .home .content-pick .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
